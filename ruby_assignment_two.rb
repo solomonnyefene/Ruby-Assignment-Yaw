@@ -1,4 +1,5 @@
 
+#A function that determines if a number is prime or not
 def is_prime?(x, e)
 	root = square_root(x, e);
 	root = root.round
@@ -24,7 +25,7 @@ end
 puts is_prime(4, 0.001)
 
 
-
+# Write a function that takes the product of each item of an array except the index
 def product_except_index(1,2,3,4,)
 	1=2*3*4
 	2=3*4*1
