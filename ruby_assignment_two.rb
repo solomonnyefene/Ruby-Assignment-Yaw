@@ -22,3 +22,12 @@ end
 
 
 puts is_prime(4, 0.001)
+
+
+
+def product_except_index(1,2,3,4,)
+	1=2*3*4
+	2=3*4*1
+	3=4*1*2
+	4=1*2*3
+#I understand the concept but dont really know how to put it logically.
