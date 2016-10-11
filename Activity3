@@ -1,0 +1,56 @@
+my_list = [3,5,4,8,3,2,1,6,11]
+#todo
+#implement ascending order here
+def ascending_order(my_list):
+    length_list = len(my_list) - 1
+    sorted = False
+    while not sorted:
+        sorted = True
+        for i in range(length_list):
+            if my_list[i] > my_list[i+1]:
+                sorted = False
+                my_list[i], my_list[i+1] = my_list[i+1], my_list[i]
+    return my_list
+
+
+def return_prev_min_and_max_prev(list_):
+	list_ = ascending_order(list_)
+	new_list = []
+	new_list.append(list_[1])
+	new_list.append(list_[-2])
+	print new_list
+
+return_prev_min_and_max_prev(my_list)
+
+#snake_words
+def snake(word):
+    str_ = ""
+    for w in word:
+        if ord(w) >= 65 and ord(w) <= 90:
+        	str_ = "{}_{}".format(str_,w.lower())
+        else:
+        	str_ = "{}{}".format(str_,w)
+    return str_
+
+
+print snake("AhdshsdAuydyds")
+
+#split arrays to two parts
+#one ascending the other descending
+def split_list_in_asc_and_dsc(list_):
+	sorted_list = ascending_order(list_)
+	d = int(len(sorted_list)/2.0)
+	first_list = sorted_list[:d]
+	lenght_of_second_list = len(list_) - d
+	second_list = []
+	i = -1
+	while lenght_of_second_list > 0:
+		second_list.append(sorted_list[i])
+		i-=1
+		lenght_of_second_list -=1
+	print first_list
+	print second_list
+	#while 
+
+
+split_list_in_asc_and_dsc(my_list)
